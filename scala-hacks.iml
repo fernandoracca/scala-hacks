@@ -19,11 +19,14 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="scala-library-2.8.0" level="application" />
-    <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.8.0" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang:scala-compiler:2.8.0" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.8.1.RC2" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-compiler:2.8.1.RC2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-all:1.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.scala-tools.testing:specs_2.8.0:1.6.5" level="project" />
+    <orderEntry type="library" name="Maven: com.weiglewilczek.slf4s:slf4s_2.8.0:1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.6.1" level="project" />
   </component>
 </module>
 

@@ -2,7 +2,7 @@ package hacks.specs
 
 import org.specs.Specification
 
-class BeforeAfterSpecification extends Specification {
+class BeforeTestSpecification extends Specification {
   "this system" should {
     var x = 0
     "execute the first example" in {
