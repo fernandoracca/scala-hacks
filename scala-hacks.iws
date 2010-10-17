@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8658f6a9-26e3-4f41-a16a-ac18c93392e8" name="Default" comment="USBonds ported from old project to use Specs. Factorial and SLF4S">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/hacks/finance/DataGeneratorUtil.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/hacks/finance/BondRatingsGeneratorSpecification.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/hacks/finance/DataGeneratorUtilSpecification.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/hacks/regex/RegexMatcher.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/hacks/actor/Counter.scala" afterPath="" />
+    <list default="true" id="8658f6a9-26e3-4f41-a16a-ac18c93392e8" name="Default" comment="Add BondRatings data generators">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/hacks/clipper/ClipperTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/hacks/CanaryTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/hacks/CanaryTest.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/hacks/clipper/Clipper.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/hacks/ElevatorTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/hacks/elevator/ElevatorTest.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scala-hacks.iws" afterPath="$PROJECT_DIR$/scala-hacks.iws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/hacks/finance/BondRatingsGenerator.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/hacks/regex/RegexMatcher.scala" afterPath="$PROJECT_DIR$/src/main/scala/hacks/regex/RegexMatcher.scala" />
     </list>
-    <ignored path=".idea/libraries/Maven__junit_junit_4_8_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_scala_lang_scala_compiler_2_8_0.xml" />
+    <ignored path=".idea/runConfigurations/QuantLeap_fsc.xml" />
+    <ignored path=".idea/libraries/Maven__org_scala_lang_scala_library_2_8_0.xml" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/inspectionProfiles/Project_Default.xml" />
     <ignored path="scala-hacks.iws" />
     <ignored path=".idea/libraries/Maven__org_scala_tools_testing_specs_2_8_0_1_6_5.xml" />
-    <ignored path=".idea/runConfigurations/QuantLeap_fsc.xml" />
-    <ignored path=".idea/inspectionProfiles/Project_Default.xml" />
-    <ignored path=".idea/inspectionProfiles/profiles_settings.xml" />
-    <ignored path=".idea/libraries/Maven__org_scala_lang_scala_compiler_2_8_0.xml" />
-    <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/libraries/Maven__org_hamcrest_hamcrest_all_1_2.xml" />
-    <ignored path=".idea/libraries/Maven__org_scala_lang_scala_library_2_8_0.xml" />
+    <ignored path=".idea/inspectionProfiles/profiles_settings.xml" />
     <ignored path=".idea/dictionaries/fernando.xml" />
+    <ignored path=".idea/libraries/Maven__junit_junit_4_8_1.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +42,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/test/scala/hacks/ElevatorTest.scala" line="16" class="Class at ElevatorTest.scala:16" package="">
+      <breakpoint url="file://$PROJECT_DIR$/src/test/scala/hacks/elevator/ElevatorTest.scala" line="25" class="Class at ElevatorTest.scala:25" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -55,20 +55,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/test/scala/hacks/ElevatorTest.scala" line="25" class="Class at ElevatorTest.scala:25" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/test/scala/hacks/ElevatorTest.scala" line="27" class="Class at ElevatorTest.scala:27" package="">
+      <breakpoint url="file://$PROJECT_DIR$/src/test/scala/hacks/elevator/ElevatorTest.scala" line="27" class="Class at ElevatorTest.scala:27" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -122,7 +109,35 @@
   </component>
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="23" selection-start="2220" selection-end="2220" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Clipper.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/hacks/clipper/Clipper.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="1" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClipperTest.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/hacks/clipper/ClipperTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="10" selection-start="198" selection-end="210" vertical-scroll-proportion="0.6">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -136,24 +151,34 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/hacks/io/LinePrinter.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/hacks/io/Resource.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/hacks/specs/HelloWorldSpecs.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/hacks/elevator/Elevator.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/hacks/functional/Factorial.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/hacks/ElevatorTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/hacks/specs/BeforeAfterSpecification.scala" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/hacks/logging/LogDemo.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/hacks/finance/USBond.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/hacks/finance/USBondSpecification.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/hacks/regex/RegexMatcher.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/hacks/finance/BondRatingsGenerator.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/hacks/finance/BondRatingsGeneratorSpecification.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/hacks/finance/DataGeneratorUtil.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/hacks/finance/DataGeneratorUtilSpecification.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/hacks/regex/RegexMatcher.scala" />
+        <option value="$PROJECT_DIR$/scala-hacks.iws" />
+        <option value="$PROJECT_DIR$/src/test/scala/hacks/CanaryTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/hacks/clipper/Clipper.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/hacks/clipper/ClipperTest.scala" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
   </component>
   <component name="MavenRunner">
     <option name="jreName" value="#JAVA_INTERNAL" />
@@ -193,7 +218,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -264,67 +289,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala-hacks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala-hacks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hacks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala-hacks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala-hacks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hacks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sort" />
+              <option name="myItemId" value="clipper" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -351,82 +316,18 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hacks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala-hacks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala-hacks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hacks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="regex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegexMatcher.scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala-hacks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala-hacks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hacks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finance" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Favorites" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
@@ -441,42 +342,12 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.hacks in scala-hacks">
-    <configuration default="false" name="USBondSpecification" type="SpecsRunConfiguration" factoryName="Specs" temporary="true">
-      <module name="scala-hacks" />
-      <setting name="path" value="hacks.finance.USBondSpecification" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="packagepath" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="sysFilter" value=".*" />
-      <setting name="exampleFilter" value=".*" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="BondRatingsGeneratorSpecification" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="snapshooter" />
-      <module name="scala-hacks" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="hacks.finance" />
-      <option name="MAIN_CLASS_NAME" value="hacks.finance.BondRatingsGeneratorSpecification" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/scala/hacks/elevator" />
+    </key>
+  </component>
+  <component name="RunManager" selected="ScalaTest.ClipperSuite">
     <configuration default="false" name="BondRatingsGeneratorSpecification" type="SpecsRunConfiguration" factoryName="Specs" temporary="true">
       <module name="scala-hacks" />
       <setting name="path" value="hacks.finance.BondRatingsGeneratorSpecification" />
@@ -521,6 +392,40 @@
         <value defaultName="moduleWithDependencies" />
       </option>
       <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="JUnitAndHamcrestTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="snapshooter" />
+      <module name="scala-hacks" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="hacks" />
+      <option name="MAIN_CLASS_NAME" value="hacks.JUnitAndHamcrestTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ClipperSuite" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="scala-hacks" />
+      <setting name="path" value="hacks.clipper.ClipperSuite" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="version" value="false" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -655,12 +560,12 @@
       </method>
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Scala Compilation Server.FSC Server" />
-      <item index="1" class="java.lang.String" itemvalue="Specs.USBondSpecification" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BondRatingsGeneratorSpecification" />
-      <item index="3" class="java.lang.String" itemvalue="Specs.BondRatingsGeneratorSpecification" />
-      <item index="4" class="java.lang.String" itemvalue="Specs.DataGeneratorUtilSpecification" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.hacks in scala-hacks" />
+      <item index="0" class="java.lang.String" itemvalue="Specs.BondRatingsGeneratorSpecification" />
+      <item index="1" class="java.lang.String" itemvalue="Specs.DataGeneratorUtilSpecification" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.hacks in scala-hacks" />
+      <item index="3" class="java.lang.String" itemvalue="Scala Compilation Server.FSC Server" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.JUnitAndHamcrestTest" />
+      <item index="5" class="java.lang.String" itemvalue="ScalaTest.ClipperSuite" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -706,26 +611,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="774" extended-state="6" />
+    <frame x="33" y="24" width="1257" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3533123" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24617738" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35474005" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24917218" sideWeight="0.22239748" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39983442" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294702" sideWeight="0.6356467" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290008" sideWeight="0.6360856" order="0" side_tool="false" content_ui="tabs" x="235" y="126" width="314" height="452" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3418874" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35321102" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27069536" sideWeight="0.63722396" order="0" side_tool="false" content_ui="tabs" x="235" y="126" width="314" height="452" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24617738" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35173503" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294702" sideWeight="0.6356467" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -743,7 +648,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="USBonds ported from old project to use Specs. Factorial and SLF4S" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add BondRatings data generators" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -758,119 +663,98 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Add unit tests, altough they fail under various conditions." />
     <MESSAGE value="USBonds ported from old project to use Specs. Factorial and SLF4S" />
+    <MESSAGE value="Add BondRatings data generators" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/hacks/finance/USBond.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/hacks/regex/RegexMatcher.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="7" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="8" column="4" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/hacks/logging/LogDemo.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="6" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/hacks/io/Resource.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="7" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/hacks/elevator/ElevatorTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="3" selection-start="218" selection-end="220" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/hacks/specs/BeforeAfterSpecification.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0">
+        <state line="4" column="29" selection-start="59" selection-end="82" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/hacks/finance/BondRatingsGenerator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="27" selection-start="109" selection-end="129" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/hacks/finance/USBond.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="12" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dictionaries/fernando.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scala-hacks.iws">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="571" column="82" selection-start="27725" selection-end="27725" vertical-scroll-proportion="0.06737588">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/hacks/specs/HelloWorldSpecification.scala">
+    <entry file="file://$PROJECT_DIR$/scala-hacks.ipr">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="7" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+        <state line="226" column="30" selection-start="12883" selection-end="12883" vertical-scroll-proportion="-0.0017730496" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scala-hacks.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="205" selection-end="210" vertical-scroll-proportion="0.04255319" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/runConfigurations/QuantLeap_fsc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="40" selection-start="416" selection-end="416" vertical-scroll-proportion="0.29661018" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/hacks/CanaryTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="85" selection-start="191" selection-end="191" vertical-scroll-proportion="0.6">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/hacks/ElevatorTest.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/hacks/clipper/Clipper.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="6" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
+        <state line="57" column="1" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="26" selection-start="2485" selection-end="2485" vertical-scroll-proportion="0.0">
+        <state line="64" column="23" selection-start="2220" selection-end="2220" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/hacks/collection/sort/SortWithTest.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/hacks/clipper/ClipperTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="6" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/hacks/collection/sort/SortWith.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="7" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/hacks/eventsourcing/ship/ActorBasedEventSourcingDemo.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="6" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/hacks/actor/PingPong.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="12" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/hacks/regex/RegexMatcher.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="6" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/hacks/finance/BondRatingsGeneratorSpecification.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="12" selection-start="206" selection-end="239" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/hacks/collection/sort/DataSetGenerator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="223" selection-end="223" vertical-scroll-proportion="0.12">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/scala-tools/testing/specs_2.8.0/1.6.5/specs_2.8.0-1.6.5.jar!/org/specs/matcher/StringBeHaveMatchers.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.5967742">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/hacks/finance/BondRatingsGenerator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="93" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/hacks/finance/DataGeneratorUtil.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="66" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.6155914">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/hacks/finance/DataGeneratorUtilSpecification.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="306" selection-end="306" vertical-scroll-proportion="0.83979326">
+        <state line="9" column="10" selection-start="198" selection-end="210" vertical-scroll-proportion="0.6">
           <folding />
         </state>
       </provider>

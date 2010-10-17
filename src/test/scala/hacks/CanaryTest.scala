@@ -4,7 +4,7 @@ import org.junit.Test
 import org.junit.Assert.assertThat
 import org.hamcrest.CoreMatchers.is
 
-class CanaryTest {
+class JUnitAndHamcrestTest {
 	@Test
 	def testTrue() {
 		assertThat(true, is(true))
